@@ -10,8 +10,9 @@ const MESSAGE = mongoose.model("Message", new mongoose.Schema({
 }));
 
 mongoose.connect(URI,() => {
-    console.log("[base connected]");
+    console.log("[Base Connected]");
     http();
+    console.log("[RESPONSE SEND]");
 });
 
 function find() {
@@ -20,6 +21,7 @@ function find() {
             console.log(err);
         }
         else {
+            console.log("Data sent.")
             return(data[0].data);
         }
     });
