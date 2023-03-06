@@ -36,7 +36,7 @@ mongoose.connect(URI,() => {console.log("[Base Connected]");});
 
 app.all('/', (req, res) => {
         console.log("[REQUEST RECIEVED]");
-        res.sendFile("/home/qb/github/pager-server/messages.txt");
+        res.sendFile(__dirname + "/messages.txt");
     })
 
 app.listen(process.env.PORT || 3000);
