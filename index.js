@@ -29,7 +29,7 @@ app.post('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get('/messages', (request, response) => {
+app.get('/msg', (request, response) => {
     response.sendFile(__dirname + "/msg.txt")
 });
 
