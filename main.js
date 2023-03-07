@@ -11,14 +11,6 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
-const URI = "mongodb+srv://qb:rootqb@files-cluster.xdcz95b.mongodb.net/messagesbase?retryWrites=true&w=majority";
-const ID = "369"
-
-//[Mongoose Schema]
-const MESSAGE = mongoose.model("Message", new mongoose.Schema({
-    _id: String,
-    data: String
-}));
 
 
 app.post('/post', (req, res) => {
@@ -46,6 +38,14 @@ app.listen(3000, () => {
 });
 
 
+
+// const URI = "mongodb+srv://qb:rootqb@files-cluster.xdcz95b.mongodb.net/messagesbase?retryWrites=true&w=majority";
+// const ID = "369"
+// //[Mongoose Schema]
+// const MESSAGE = mongoose.model("Message", new mongoose.Schema({
+//     _id: String,
+//     data: String
+// }));
 
 //[Establishing Connection with ATLAS.]
 // mongoose.connect(URI,() => {
