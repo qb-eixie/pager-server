@@ -1,7 +1,7 @@
 //[dependecies]
 const express = require('express');
 const fs = require("fs");
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 
 //[middelware funtions]
@@ -20,11 +20,6 @@ const MESSAGE = mongoose.model("Message", new mongoose.Schema({
     data: String
 }));
 
-//[Establishing Connection with ATLAS.]
-// mongoose.connect(URI,() => {
-//     console.log("[Base Connected]"); 
-//     // postfn();
-// });
 
 app.post('/post', (req, res) => {
     const formData = req.body;
@@ -52,15 +47,19 @@ app.listen(3000, () => {
 
 
 
-
+//[Establishing Connection with ATLAS.]
+// mongoose.connect(URI,() => {
+//     console.log("[Base Connected]"); 
+//     // postfn();
+// });
 
 // MESSAGE.find({_id: ID})
 //     .then(err => {
 //         if(err) {
-//             console.log(err);
-//         }})
-//     .then(data => {
-//             fs.appendFile("./history.txt", String(data), (err) => {
+    //             console.log(err);
+    //         }})
+    //     .then(data => {
+        //             fs.appendFile("./history.txt", String(data), (err) => {
 //                 if(err) {
 //                     console.log(err)
 //                 };
