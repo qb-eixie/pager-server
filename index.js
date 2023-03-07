@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
     console.log(formData);
     fs.writeFile("messages.txt", formData.msg, (err) => {
         if(err) {
-            comsole.log(err);
+            console.log(err);
         }
     });
     res.sendFile(__dirname + "/public/index.html");
