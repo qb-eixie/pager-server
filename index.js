@@ -30,7 +30,7 @@ app.post('/', (req, res) => {
 });
 
 app.get('/messages', (request, response) => {
-    response.sendFile(__dirname + "/messages.txt")
+    response.sendFile(__dirname + "/msg.txt")
 });
 
 app.listen(3000, () => {
