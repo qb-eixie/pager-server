@@ -54,16 +54,11 @@ app.listen(3000, () => {
 // });
 
 // MESSAGE.find({_id: ID})
-//     .then(err => {
-//         if(err) {
-    //             console.log(err);
-    //         }})
-    //     .then(data => {
-        //             fs.appendFile("./history.txt", String(data), (err) => {
-//                 if(err) {
-//                     console.log(err)
-//                 };
-//             });
-//             fs.watchFile("messages.txt")
-//         })
+// .then(err => {
+//     if(err) {
+//         console.log(err);
+//     }})
+// .then(data => {
+
+// });
 
