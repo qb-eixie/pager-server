@@ -29,6 +29,10 @@ app.post('/msg', (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
+// app.get('/', (request, response) => {
+//     response.sendFile("/messages.txt")
+// });
+
 app.listen(3000, () => {
     console.log('LISTENTING');
 });
