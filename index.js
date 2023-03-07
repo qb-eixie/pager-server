@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }))
 
 
 
-app.post('/msg', (req, res) => {
+app.post('/', (req, res) => {
     const formData = req.body;
     fs.appendFile(__dirname + "/history.txt", formData.msg, (err) => {
         if(err) {
@@ -29,9 +29,9 @@ app.post('/msg', (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-// app.get('/', (request, response) => {
-//     response.sendFile("/messages.txt")
-// });
+app.get('/messages', (request, response) => {
+    response.sendFile(__dirname + "/messages.txt")
+});
 
 app.listen(3000, () => {
     console.log('LISTENTING');
